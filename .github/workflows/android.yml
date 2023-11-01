@@ -19,7 +19,7 @@ jobs:
       - id: get-project
       # 读取项目地址
         name: Get project name
-        run: echo "::set-output name=PROJECT::$(cat https://github.com/chk1/VoltageInStatusbar)"
+        run: echo "::set-output name=PROJECT::$(cat VoltageInStatusbar)"
       - name: Clone project
       # 拉取项目源码到虚拟环境
         run: git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project
